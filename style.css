@@ -29,6 +29,23 @@ body{
     font-size: 30px;
     font-weight: bolder;
 }
+.logo
+{
+    margin-top: 20vh;
+    height: 10vh;
+    background-color: rgba(0,0,0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.logo img{
+    height: inherit;
+    width: auto;
+}
 
 a{
     all: unset;
