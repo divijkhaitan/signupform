@@ -46,6 +46,39 @@ body{
     height: inherit;
     width: auto;
 }
+.formbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formprompt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 28px;
+    padding-bottom: 5vh;
+}
+.forminfobar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.formcol{
+    display: flex;
+    flex-direction: column;
+}
+
+.submitbutton{
+    height: 5vh;
+    width: 12vh;
+    margin-top: 2vh;
+    color: aliceblue;
+    background-color: brown;
+    border: none;
+    border-radius: 5%;
+}
 
 a{
     all: unset;

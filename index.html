@@ -19,9 +19,51 @@
         </div>
     </div>
     <div class="formbar">
-        <div class="formprompt">Unreal Vacations. Need a break? We offer holidays so amazing you will not believe they are real! Sign up today to plan your vacation. </div>
-        <form action="" method="post"></form>
-        <div class="login"></div>
-    </div>    
+        <div class="formprompt">
+            <div class="heading">
+                Unreal Vacations
+            </div>
+            <div class="subheading">
+                Need a break? We offer holidays so amazing you will not believe they are real!
+            </div>
+            <div class="text"> 
+                Sign up today to plan your vacation
+            </div>
+        </div>
+        
+            <form action="" method="post">
+                <div class="forminfobar">
+                    <div class="formcol one">
+                        <label for="first_name">FIRST NAME:</label>
+                        <input type="text" id="first_name" name="first_name">
+            
+                        <label for="email_id">EMAIL ID:</label>
+                        <input type="email" id="email_id" name="email_id">
+            
+                        <label for="user_password">PASSWORD:</label>
+                        <input type="password" id="user_password" name="user_password">
+                        
+                        
+                </div>
+            
+                <div class="formcol two">
+                        <label for="last_name">LAST NAME:</label>
+                        <input type="text" id="last_name" name="last_name">
+            
+                        <label for="phone">PHONE NUMBER:</label>
+                        <input type="number" id="phone" name="phone">
+            
+                        <label for="password_conf">CONFIRM PASSWORD:</label>
+                        <input type="password" id="password_conf" name="password_conf">
+                </div>
+            </form>
+        </div>
+        <div class="bottomrow">
+            <button type="button" class="submitbutton">Create Account</button>
+            <div class="login">
+                Already have an account? <a href="index.html">Log In</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
