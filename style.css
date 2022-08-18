@@ -86,6 +86,16 @@ form {
     flex-direction: column;
 }
 
+input{
+    appearance: none;
+    border: 1px solid black;
+}
+
+input:focus{
+    appearance: none;
+    background-color: lightblue;
+    border: none;
+}
 .submitbutton{
     height: 5vh;
     width: 12vh;
