@@ -49,7 +49,9 @@ body{
 .formbar{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    padding-left: 4vh;
+    padding-right: 4vh;
 }
 
 .formprompt{
@@ -57,15 +59,29 @@ body{
     flex-direction: column;
     justify-content: space-around;
     font-size: 28px;
-    padding-bottom: 5vh;
+    padding-bottom: auto;
+    flex-grow: 1;
 }
 .forminfobar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .formcol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+}
+
+form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.formitem{
     display: flex;
     flex-direction: column;
 }
@@ -78,6 +94,10 @@ body{
     background-color: brown;
     border: none;
     border-radius: 5%;
+}
+
+.bottomrow{
+    flex-grow: 1;
 }
 
 a{
