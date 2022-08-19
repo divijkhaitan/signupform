@@ -86,15 +86,11 @@ form {
     flex-direction: column;
 }
 
-input{
-    appearance: none;
-    border: 1px solid black;
+input:focus { 
+    outline: none !important;
 }
-
 input:focus{
-    appearance: none;
-    background-color: lightblue;
-    border: none;
+    border: 2px #4293f5 inset;
 }
 .submitbutton{
     height: 5vh;
@@ -112,4 +108,10 @@ input:focus{
 
 a{
     all: unset;
+}
+.invalid{
+    border: 2px red solid;
+}
+.valid{
+    border: 2px green solid;
 }
