@@ -115,3 +115,13 @@ a{
 .valid{
     border: 2px green solid;
 }
+
+.entpass.invalid:after{
+    content: Passwords do not match;
+}
+
+.errmess{
+    color: red;
+    font-size: 12px;
+    display: none;
+}

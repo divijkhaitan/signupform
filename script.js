@@ -1,45 +1,58 @@
 const entpass=document.querySelector('.entpass')
 const confpass=document.querySelector('.confpass')
-const btn=document.querySelector('.submitbutton')
-btn.addEventListener('click', clicked)
-confpass.addEventListener('focus', focused)
+const form=document.querySelector('.form')
+const errmess=document.querySelector('.errmess')
+form.addEventListener('submit', submitted)
+confpass.addEventListener('change', changed)
 let validpass=false
-function focused(e)
+function changed(e)
 {
-    let confpassFocused=(document.activeElement===confpass)
-    while(confpassFocused)
-    {
-        confpassFocused=(document.activeElement===confpass)
-        if(confpass.value!=="")
+    if((confpass.value===entpass.value))
         {
-            if(!(confpass.value===entpass.value))
+            if(confpass.value!=="")
             {
-                validpass=false
-                confpass.classList.remove('valid')
-                entpass.classList.remove('valid')
+                validpass=true
+                confpass.classList.remove('invalid')
+                entpass.classList.remove('invalid')
                 
-                confpass.classList.add('invalid')
-                entpass.classList.add('invalid')
-                btn.type="submit"
+                confpass.classList.add('valid')
+                entpass.classList.add('valid')
+                console.log("none")
+                errmess.style.display="none"
             }
             else
             {
-                validpass=true
-                confpass.classList.remove('valid')
-                entpass.classList.remove('valid')
-                
-                confpass.classList.add('invalid')
-                entpass.classList.add('invalid')
-                btn.type="button"
+            validpass=false
+            confpass.classList.remove('valid')
+            entpass.classList.remove('valid')
+            
+            console.log("block")
+            errmess.style.display="block"
+            confpass.classList.add('invalid')
+            entpass.classList.add('invalid')
             }
         }
-    }
+    else
+        {
+            validpass=false
+            confpass.classList.remove('valid')
+            entpass.classList.remove('valid')
+            
+            errmess.style.display="block"
+            console.log("block")    
+            confpass.classList.add('invalid')
+            entpass.classList.add('invalid')
+        }
 }
 
-function clicked(e)
+function submitted(e)
 {
- if (btn.type="button")
- {
-    alert('Your form is invalid. Please check and try again.')
- }   
+    if(confpass!==entpass)
+    {
+        e.preventDefault();
+        alert('Your form is invalid. Please check and try again.');
+        return;
+    }
+    console.log("submitted")
+    
 }
