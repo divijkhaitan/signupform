@@ -11,30 +11,37 @@ function changed(e)
         {
             if(confpass.value!=="")
             {
-                validpass=true
-                confpass.classList.remove('invalid')
-                entpass.classList.remove('invalid')
-                
-                confpass.classList.add('valid')
-                entpass.classList.add('valid')
-                console.log("none")
-                errmess.style.display="none"
+                valid()
             }
             else
             {
-            validpass=false
-            confpass.classList.remove('valid')
-            entpass.classList.remove('valid')
-            
-            console.log("block")
-            errmess.style.display="block"
-            confpass.classList.add('invalid')
-            entpass.classList.add('invalid')
+                invalid()
             }
         }
     else
         {
-            validpass=false
+            invalid()
+        }
+}
+
+function submitted(e)
+{
+    if(confpass.value!==entpass.value)
+    {
+        invalid()
+        console.log
+        e.preventDefault();
+        alert('Your form is invalid. Please check and try again.');
+        return;
+    }
+    valid()
+    console.log("submitted")
+    
+}
+
+function invalid()
+{
+    validpass=false
             confpass.classList.remove('valid')
             entpass.classList.remove('valid')
             
@@ -42,17 +49,17 @@ function changed(e)
             console.log("block")    
             confpass.classList.add('invalid')
             entpass.classList.add('invalid')
-        }
+
 }
 
-function submitted(e)
+function valid()
 {
-    if(confpass!==entpass)
-    {
-        e.preventDefault();
-        alert('Your form is invalid. Please check and try again.');
-        return;
-    }
-    console.log("submitted")
-    
+    validpass=true
+                confpass.classList.remove('invalid')
+                entpass.classList.remove('invalid')
+                
+                confpass.classList.add('valid')
+                entpass.classList.add('valid')
+                console.log("none")
+                errmess.style.display="none"
 }
